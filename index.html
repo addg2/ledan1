@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="شركة لدن - شركة متخصصة في البرمجة، تصميم المواقع، التطبيقات، التسويق الرقمي، التصميم، كتابة المحتوى والتصوير الفوتوغرافي">
+    <meta name="keywords" content="لدن, برمجة, تصميم مواقع, تطبيقات, تسويق رقمي, تصميم جرافيك, كتابة محتوى, تصوير فوتوغرافي">
+    <meta name="author" content="Ladan Company">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Arabic">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ladan.com/">
+    <meta property="og:title" content="لدن - Ladan | شركة الحلول الرقمية المتكاملة">
+    <meta property="og:description" content="شركة متخصصة في البرمجة، تصميم المواقع، التطبيقات، التسويق الرقمي، التصميم، كتابة المحتوى والتصوير الفوتوغرافي">
+    <meta property="og:image" content="https://www.ladan.com/og-image.jpg">
+    <meta property="og:locale" content="ar_SA">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.ladan.com/">
+    <meta name="twitter:title" content="لدن - Ladan | شركة الحلول الرقمية المتكاملة">
+    <meta name="twitter:description" content="شركة متخصصة في البرمجة، تصميم المواقع، التطبيقات، التسويق الرقمي، التصميم، كتابة المحتوى والتصوير الفوتوغرافي">
+    <meta name="twitter:image" content="https://www.ladan.com/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://via.placeholder.com/32x32/6366f1/ffffff?text=L">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://via.placeholder.com/180x180/6366f1/ffffff?text=L">
+    
+    <title>لدن - Ladan | شركة الحلول الرقمية المتكاملة</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ============================================================
+         EMBEDDED CSS (style.css)
+         ============================================================ -->
+    <style>
+/* ===================================
+   Global Variables & Reset
+   =================================== */
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary-color: #ec4899;
+    --secondary-dark: #db2777;
+    --accent-color: #f59e0b;
+    
+    --dark-bg: #0f172a;
+    --dark-surface: #1e293b;
+    --dark-card: #334155;
+    
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-light: #94a3b8;
+    --text-white: #ffffff;
+    
+    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --gradient-2: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
+    --gradient-3: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-primary: 'Cairo', 'Tajawal', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    background-color: #ffffff;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   Loader
+   =================================== */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===================================
+   Container
+   =================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===================================
+   Navigation
+   =================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    box-shadow: var(--shadow-md);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo i {
+    font-size: 2rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo-text {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo-text-en {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-1);
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.lang-switch {
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-switch:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-bg);
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-title-main {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title-sub {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    background: linear-gradient(to right, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-description {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(180deg); }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    z-index: 2;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* ===================================
+   Buttons
+   =================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* ===================================
+   Section Styles
+   =================================== */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* ===================================
+   Services Section
+   =================================== */
+.services {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: var(--transition);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.service-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.service-features i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.service-link:hover {
+    gap: 15px;
+}
+
+/* ===================================
+   About Section
+   =================================== */
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.about-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.about-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--gradient-1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.badge-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.badge-text {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.about-content {
+    padding: 2rem 0;
+}
+
+.about-text {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* ===================================
+   Why Us Section
+   =================================== */
+.why-us {
+    background: var(--dark-bg);
+    color: white;
+}
+
+.why-us .section-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.why-us .section-title {
+    color: white;
+}
+
+.why-us .section-description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.why-card {
+    background: var(--dark-surface);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    background: var(--dark-card);
+    border-color: var(--primary-color);
+}
+
+.why-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.why-card:hover .why-icon {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.why-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.why-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+/* ===================================
+   Portfolio Section
+   =================================== */
+.portfolio {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: var(--text-primary);
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gradient-1);
+    color: white;
+    border-color: transparent;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.portfolio-item.hidden {
+    display: none;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.95), rgba(139, 92, 246, 0.95));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.portfolio-link {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.portfolio-link:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* ===================================
+   Contact Section
+   =================================== */
+.contact {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.contact-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.contact-details p {
+    color: var(--text-secondary);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    transform: translateY(-5px) rotate(360deg);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    transition: var(--transition);
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+.form-group textarea + i {
+    top: 1.5rem;
+    transform: none;
+}
+
+.btn-submit {
+    width: 100%;
+    justify-content: center;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    background: var(--gradient-1);
+    color: white;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+    background: var(--dark-bg);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.footer-logo i {
+    color: var(--primary-color);
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--gradient-1);
+    transform: translateY(-5px);
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-right: 5px;
+}
+
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact i {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-bottom-links a:hover {
+    color: white;
+}
+
+/* ===================================
+   Scroll to Top Button
+   =================================== */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: var(--shadow-xl);
+        transition: var(--transition);
+        align-items: flex-start;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .hero {
+        margin-top: 70px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .services-grid,
+    .why-us-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-wrapper,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* ===================================
+   Animations
+   =================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* AOS Override */
+[data-aos] {
+    pointer-events: auto;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .scroll-top,
+    .loader {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-gem"></i>
+                    <span class="logo-text">لدن</span>
+                    <span class="logo-text-en">Ladan</span>
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="#services" class="nav-link">خدماتنا</a></li>
+                    <li><a href="#about" class="nav-link">من نحن</a></li>
+                    <li><a href="#why-us" class="nav-link">لماذا نحن</a></li>
+                    <li><a href="#portfolio" class="nav-link">أعمالنا</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                    <li><button class="lang-switch" id="langSwitch">EN</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        <span class="hero-title-main">نبدع حلولاً رقمية</span>
+                        <span class="hero-title-sub">تصنع الفارق</span>
+                    </h1>
+                    <p class="hero-description">
+                        شركة لدن - شريكك الموثوق في رحلة التحول الرقمي. نقدم حلولاً متكاملة في البرمجة، التصميم، التسويق، والمحتوى الإبداعي
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">استكشف خدماتنا</a>
+                        <a href="#contact" class="btn btn-outline">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <a href="#services" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">خدماتنا</span>
+                <h2 class="section-title">حلول رقمية متكاملة</h2>
+                <p class="section-description">نقدم مجموعة شاملة من الخدمات الرقمية لتحويل أفكارك إلى واقع ملموس</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: Programming -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3 class="service-title">البرمجة وتطوير البرمجيات</h3>
+                    <p class="service-description">تطوير برمجيات مخصصة وحلول تقنية متقدمة تلبي احتياجات عملك بكفاءة عالية</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تطوير أنظمة مخصصة</li>
+                        <li><i class="fas fa-check"></i> برمجة API متقدمة</li>
+                        <li><i class="fas fa-check"></i> حلول قواعد البيانات</li>
+                    </ul>
+                    <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- Service 2: Web Design -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                    <h3 class="service-title">تصميم المواقع الإلكترونية</h3>
+                    <p class="service-description">تصميم مواقع احترافية وعصرية تجذب العملاء وتعزز تواجدك الرقمي</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تصميم متجاوب</li>
+                        <li><i class="fas fa-check"></i> واجهات مستخدم حديثة</li>
+                        <li><i class="fas fa-check"></i> تحسين محركات البحث</li>
+                    </ul>
+                    <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- Service 3: Mobile Apps -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="service-title">تطوير تطبيقات الجوال</h3>
+                    <p class="service-description">تطبيقات جوال مبتكرة لنظامي iOS و Android بأداء ممتاز وتجربة مستخدم سلسة</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تطبيقات iOS و Android</li>
+                        <li><i class="fas fa-check"></i> تصميم UI/UX متميز</li>
+                        <li><i class="fas fa-check"></i> صيانة ودعم مستمر</li>
+                    </ul>
+                    <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- Service 4: Digital Marketing -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="service-title">التسويق الرقمي والإلكتروني</h3>
+                    <p class="service-description">استراتيجيات تسويقية مدروسة تساعدك على الوصول لجمهورك المستهدف وزيادة مبيعاتك</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> إدارة حملات إعلانية</li>
+                        <li><i class="fas fa-check"></i> تسويق عبر مواقع التواصل</li>
+                        <li><i class="fas fa-check"></i> تحليل وقياس الأداء</li>
+                    </ul>
+                    <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- Service 5: Graphic Design -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3 class="service-title">التصميم الجرافيكي والهوية البصرية</h3>
+                    <p class="service-description">تصاميم إبداعية وهويات بصرية مميزة تعكس قيمة علامتك التجارية</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تصميم الشعارات</li>
+                        <li><i class="fas fa-check"></i> الهوية البصرية المتكاملة</li>
+                        <li><i class="fas fa-check"></i> مواد تسويقية إبداعية</li>
+                    </ul>
+                    <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- Service 6: Content Writing -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h3 class="service-title">كتابة المحتوى الإبداعي</h3>
+                    <p class="service-description">محتوى احترافي ومؤثر يحكي قصة علامتك التجارية ويجذب جمهورك</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> محتوى تسويقي</li>
+                        <li><i class="fas fa-check"></i> مقالات وتدوينات</li>
+                        <li><i class="fas fa-check"></i> كتابة نصوص إعلانية</li>
+                    </ul>
+                    <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- Service 7: Photography -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+                    <h3 class="service-title">التصوير الفوتوغرافي الاحترافي</h3>
+                    <p class="service-description">تصوير احترافي يبرز جمال منتجاتك وخدماتك بأسلوب فني متميز</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تصوير المنتجات</li>
+                        <li><i class="fas fa-check"></i> تصوير الفعاليات</li>
+                        <li><i class="fas fa-check"></i> معالجة وتحرير احترافي</li>
+                    </ul>
+                    <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image" data-aos="fade-left">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="فريق لدن">
+                        <div class="about-badge">
+                            <span class="badge-number">5+</span>
+                            <span class="badge-text">سنوات خبرة</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content" data-aos="fade-right">
+                    <span class="section-tag">من نحن</span>
+                    <h2 class="section-title">شركة لدن للحلول الرقمية</h2>
+                    <p class="about-text">
+                        نحن شركة رائدة في مجال الحلول الرقمية المتكاملة، نجمع بين الخبرة والإبداع لتقديم أفضل الخدمات في عالم التقنية والتصميم. فريقنا المتخصص يعمل بشغف لتحويل رؤيتك إلى واقع ملموس.
+                    </p>
+                    <p class="about-text">
+                        نؤمن بأن النجاح الحقيقي يكمن في تقديم قيمة حقيقية لعملائنا، لذلك نحرص على فهم احتياجاتك بعمق وتقديم حلول مبتكرة تتجاوز توقعاتك.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <div class="stat-content">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">مشروع منجز</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <div class="stat-content">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">عميل راضٍ</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-award"></i>
+                            <div class="stat-content">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">جائزة وتكريم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">لماذا نحن</span>
+                <h2 class="section-title">ما يميزنا عن الآخرين</h2>
+                <p class="section-description">نجمع بين الخبرة والابتكار لتقديم خدمات استثنائية</p>
+            </div>
+            
+            <div class="why-us-grid">
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>سرعة في التنفيذ</h3>
+                    <p>نلتزم بمواعيد التسليم ونعمل بكفاءة عالية لإنجاز مشاريعك في الوقت المحدد</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="why-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>حلول مبتكرة</h3>
+                    <p>نقدم أفكاراً إبداعية وحلولاً مبتكرة تواكب أحدث التوجهات العالمية</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>جودة عالمية</h3>
+                    <p>نعمل وفق معايير عالمية لضمان تقديم أعلى مستويات الجودة والاحترافية</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>شراكة حقيقية</h3>
+                    <p>نؤمن ببناء علاقات طويلة الأمد مع عملائنا ونعتبرهم شركاء في النجاح</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h3>دعم متواصل</h3>
+                    <p>فريق دعم فني متاح على مدار الساعة لمساعدتك وحل أي استفسار</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>نقدم أفضل الأسعار مع الحفاظ على الجودة العالية لخدماتنا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">أعمالنا</span>
+                <h2 class="section-title">مشاريع ملهمة أنجزناها</h2>
+                <p class="section-description">نفخر بما حققناه لعملائنا من نجاحات</p>
+            </div>
+            
+            <div class="portfolio-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="web">مواقع إلكترونية</button>
+                <button class="filter-btn" data-filter="app">تطبيقات</button>
+                <button class="filter-btn" data-filter="design">تصميم</button>
+                <button class="filter-btn" data-filter="marketing">تسويق</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="مشروع 1">
+                        <div class="portfolio-overlay">
+                            <h3>منصة تجارة إلكترونية</h3>
+                            <p>تطوير وتصميم متجر إلكتروني متكامل</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80" alt="مشروع 2">
+                        <div class="portfolio-overlay">
+                            <h3>تطبيق توصيل الطلبات</h3>
+                            <p>تطبيق جوال لخدمة التوصيل السريع</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="مشروع 3">
+                        <div class="portfolio-overlay">
+                            <h3>هوية بصرية متكاملة</h3>
+                            <p>تصميم هوية بصرية لشركة ناشئة</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="marketing" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&q=80" alt="مشروع 4">
+                        <div class="portfolio-overlay">
+                            <h3>حملة تسويقية رقمية</h3>
+                            <p>إدارة حملة إعلانية ناجحة</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="مشروع 5">
+                        <div class="portfolio-overlay">
+                            <h3>موقع شركة استشارية</h3>
+                            <p>تصميم موقع احترافي وعصري</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="مشروع 6">
+                        <div class="portfolio-overlay">
+                            <h3>تطبيق إدارة المهام</h3>
+                            <p>تطبيق لإدارة المشاريع والمهام</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">تواصل معنا</span>
+                <h2 class="section-title">لنبدأ مشروعك القادم</h2>
+                <p class="section-description">نحن متحمسون لسماع أفكارك ومساعدتك في تحقيقها</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>العنوان</h3>
+                            <p>الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>الهاتف</h3>
+                            <p dir="ltr">+966 50 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>البريد الإلكتروني</h3>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c25222a230c202d282d22622f2321">[email&#160;protected]</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-details">
+                            <h3>أوقات العمل</h3>
+                            <p>السبت - الخميس: 9:00 ص - 6:00 م</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" data-aos="fade-right">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="الاسم الكامل" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف" required>
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">اختر الخدمة المطلوبة</option>
+                            <option value="programming">البرمجة وتطوير البرمجيات</option>
+                            <option value="web-design">تصميم المواقع الإلكترونية</option>
+                            <option value="app-development">تطوير تطبيقات الجوال</option>
+                            <option value="digital-marketing">التسويق الرقمي</option>
+                            <option value="graphic-design">التصميم الجرافيكي</option>
+                            <option value="content-writing">كتابة المحتوى</option>
+                            <option value="photography">التصوير الفوتوغرافي</option>
+                        </select>
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="رسالتك" required></textarea>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>إرسال الرسالة</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gem"></i>
+                        <span>لدن</span>
+                    </div>
+                    <p class="footer-description">
+                        شركة رائدة في تقديم الحلول الرقمية المتكاملة، نجمع بين الإبداع والتقنية لتحقيق رؤيتك الرقمية.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#portfolio">أعمالنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">البرمجة</a></li>
+                        <li><a href="#services">تصميم المواقع</a></li>
+                        <li><a href="#services">التطبيقات</a></li>
+                        <li><a href="#services">التسويق الرقمي</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> عمان </li>
+                        <li><i class="fas fa-phone"></i> <span dir="ltr">+968 9592 2323</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec85828a83ac808d888d82c28f8381">[email&#160;protected]</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 <strong>لدن - Ladan</strong>. جميع الحقوق محفوظة</p>
+                <div class="footer-bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- ============================================================
+         EMBEDDED JAVASCRIPT (main.js)
+         ============================================================ -->
+    <script>
+// ===================================
+// Initialize AOS (Animate On Scroll)
+// ===================================
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+});
+
+// ===================================
+// Loader
+// ===================================
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 1000);
+});
+
+// ===================================
+// Navigation Scroll Effect
+// ===================================
+const navbar = document.getElementById('navbar');
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// ===================================
+// Mobile Menu Toggle
+// ===================================
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+    const spans = menuToggle.querySelectorAll('span');
+    if (navMenu.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+    } else {
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = '';
+    }
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = '';
+    }
+});
+
+// ===================================
+// Active Navigation Link
+// ===================================
+navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        navMenu.classList.remove('active');
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = '';
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 70;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+    });
+});
+
+// Update active link on scroll
+window.addEventListener('scroll', function() {
+    let current = '';
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') && link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// ===================================
+// Portfolio Filter
+// ===================================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filterValue = this.getAttribute('data-filter');
+        portfolioItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                item.style.display = 'block';
+                item.style.animation = 'fadeInUp 0.5s ease';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+// ===================================
+// Contact Form Handling
+// ===================================
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    showNotification('تم إرسال رسالتك بنجاح!', 'success');
+    contactForm.reset();
+    console.log('Form data:', data);
+});
+
+// ===================================
+// Notification System
+// ===================================
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+        <span>${message}</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: ${type === 'success' ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)' : 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)'};
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 10000;
+        animation: slideInRight 0.5s ease;
+        font-family: 'Cairo', sans-serif;
+    `;
+    document.body.appendChild(notification);
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.5s ease';
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 500);
+    }, 4000);
+}
+
+// ===================================
+// Scroll to Top Button
+// ===================================
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===================================
+// Smooth Scroll for All Links
+// ===================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const offsetTop = target.offsetTop - 70;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }
+        }
+    });
+});
+
+// ===================================
+// Language Switch
+// ===================================
+const langSwitch = document.getElementById('langSwitch');
+let currentLang = 'ar';
+
+langSwitch.addEventListener('click', function() {
+    if (currentLang === 'ar') {
+        currentLang = 'en';
+        langSwitch.textContent = 'AR';
+        showNotification('English version coming soon!', 'info');
+    } else {
+        currentLang = 'ar';
+        langSwitch.textContent = 'EN';
+    }
+});
+
+// ===================================
+// Counter Animation for Stats
+// ===================================
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const hasPlus = element.textContent.includes('+');
+    const increment = target / (duration / 16);
+    const counter = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target + (hasPlus ? '+' : '');
+            clearInterval(counter);
+        } else {
+            element.textContent = Math.floor(start) + (hasPlus ? '+' : '');
+        }
+    }, 16);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                animateCounter(stat, target);
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const aboutStats = document.querySelector('.about-stats');
+if (aboutStats) {
+    statsObserver.observe(aboutStats);
+}
+
+// ===================================
+// Notification Animation Styles
+// ===================================
+const notifStyle = document.createElement('style');
+notifStyle.textContent = `
+    @keyframes slideInRight {
+        from { transform: translateX(400px); opacity: 0; }
+        to   { transform: translateX(0);     opacity: 1; }
+    }
+    @keyframes slideOutRight {
+        from { transform: translateX(0);     opacity: 1; }
+        to   { transform: translateX(400px); opacity: 0; }
+    }
+`;
+document.head.appendChild(notifStyle);
+
+// ===================================
+// Parallax Effect for Hero Section
+// ===================================
+const hero = document.querySelector('.hero');
+const heroShapes = document.querySelectorAll('.shape');
+
+window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    if (hero && scrolled < window.innerHeight) {
+        heroShapes.forEach((shape, index) => {
+            const speed = (index + 1) * 0.3;
+            shape.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+    }
+});
+
+// ===================================
+// Form Input Validation & Enhancement
+// ===================================
+const formInputs = document.querySelectorAll('.form-group input, .form-group textarea, .form-group select');
+
+formInputs.forEach(input => {
+    input.addEventListener('focus', function() {
+        this.parentElement.style.borderColor = '#6366f1';
+    });
+    input.addEventListener('blur', function() {
+        this.parentElement.style.borderColor = '';
+        if (this.hasAttribute('required') && !this.value.trim()) {
+            this.style.borderColor = '#ef4444';
+        } else {
+            this.style.borderColor = '';
+        }
+    });
+    if (input.type === 'email') {
+        input.addEventListener('blur', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (this.value && !emailRegex.test(this.value)) {
+                this.style.borderColor = '#ef4444';
+                showNotification('يرجى إدخال بريد إلكتروني صحيح', 'info');
+            }
+        });
+    }
+});
+
+// ===================================
+// Lazy Loading for Images
+// ===================================
+const lazyImages = document.querySelectorAll('img[data-src]');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+        }
+    });
+});
+lazyImages.forEach(img => imageObserver.observe(img));
+
+// ===================================
+// Performance: Debounce utility
+// ===================================
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => { clearTimeout(timeout); func(...args); };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// ===================================
+// Console Welcome Message
+// ===================================
+console.log('%c مرحباً بك!', 'color: #6366f1; font-size: 20px; font-weight: bold;');
+console.log('%cWelcome to Ladan Website!', 'color: #8b5cf6; font-size: 16px;');
+console.log('%c للتواصل: info@ladan.com', 'color: #f59e0b; font-size: 14px;');
+console.log('✅ All scripts loaded successfully!');
+    </script>
+</body>
+</html>
